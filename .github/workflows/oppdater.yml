@@ -39,6 +39,7 @@ jobs:
         run: |
           mkdir _site
           cp -r index.html logo-outlinet.svg robots.txt LnsIpb4xfmjasr9s7ae5xugtLI2x4Kaj I34P4eh17y95xuDE5FtIT4IBUk0tV8JW _site/
+          echo '{"mimeTypes": {".html": "text/html; charset=utf-8", ".svg": "image/svg+xml; charset=utf-8", ".txt": "text/plain; charset=utf-8"}}' > _site/staticwebapp.config.json
       - name: Publiser til Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
